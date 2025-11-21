@@ -12,6 +12,7 @@ const interfacesToCheck = [
   'eth1', // Linux Ethernet (older setups)
   'enpXsY', // Linux predictable names for Ethernet
   'enxXXXXXX', // Linux Ethernet (based on MAC address)
+  'WLAN', // Windows Wi-Fi
   'Wi-Fi', // Windows Wi-Fi
   'Wireless Network Connection', // Windows Wi-Fi (older versions)
   'Ethernet', // Windows Ethernet
