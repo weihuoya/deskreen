@@ -12,7 +12,6 @@ import {
 	Position,
 	Popover,
 	Classes,
-	H3,
 } from '@blueprintjs/core';
 import screenfull from 'screenfull';
 import { useTranslation } from 'react-i18next';
@@ -87,13 +86,6 @@ function PlayerControlPanel(props: PlayerControlPanelProps) {
 		setIsFullScreenOn(result === 'entered');
 		return result;
 	}, [setIsFullScreenOn]);
-
-	const handleLogoClick = useCallback(() => {
-		trackAnalyticsEvent('logo_clicked', {
-			destination: 'https://deskreen.com',
-		});
-		window.open('https://deskreen.com', '_blank');
-	}, []);
 
 	const handleContributeClick = useCallback(() => {
 		trackAnalyticsEvent('contribute_clicked', {
@@ -185,23 +177,6 @@ function PlayerControlPanel(props: PlayerControlPanelProps) {
 				<Row between="xs" middle="xs">
 					<Col xs={12} md={3}>
 						<Row middle="xs" start="xs">
-							<Col xs>
-								<Tooltip
-									content={t('Click to visit our website')}
-									position={Position.BOTTOM}
-								>
-									<Button minimal onClick={handleLogoClick}>
-										<Row middle="xs">
-											<img
-												src="/img/logo512.png"
-												alt="logo"
-												style={{ height: '72px', marginRight: '12px' }}
-											/>
-											<H3 style={{ margin: 0 }}>Deskreen CE Viewer</H3>
-										</Row>
-									</Button>
-								</Tooltip>
-							</Col>
 							<Col xs>
 								<Tooltip
 									content={t(

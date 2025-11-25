@@ -1,7 +1,6 @@
 import React from 'react';
-import { Button, H3, Icon, Position, Tag, Tooltip } from '@blueprintjs/core';
+import { Button, Icon, Position, Tag, Tooltip } from '@blueprintjs/core';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
-import { Col, Row } from 'react-flexbox-grid';
 import SettingsOverlay from './SettingsOverlay/SettingsOverlay';
 import ConnectedDevicesListDrawer from './ConnectedDevicesListDrawer';
 import { useTranslation } from 'react-i18next';
@@ -333,21 +332,9 @@ export default function TopPanel({ handleReset }: Props): React.ReactElement {
 		</div>
 	);
 
-	const renderLogoWithAppName = (
-		<div
-			id="logo-with-popover-visit-website"
-			className={classes.logoWithAppName}
-		>
-			<H3>Deskreen Community Edition</H3>
-		</div>
-	);
-
 	return (
 		<>
 			<div className={classes.topPanelRoot}>
-				<Row middle="xs" center="xs" style={{ width: '100%' }}>
-					<Col>{renderLogoWithAppName}</Col>
-				</Row>
 				<div className={classes.donateButtonRoot}>{renderDonateButton}</div>
 				<div className={classes.topPanelControlsWrapper}>
 					<div className={classes.topPanelControlButtonsRoot}>
